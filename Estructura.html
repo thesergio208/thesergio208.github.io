@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="Utf-8">
+        <title>Estructura</title>
+        <style>
+            body{
+            background-image: url('Fondo_Estructura.WEBP');
+            background-size: cover; /* Cubre todo el espacio disponible */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que se repita */
+            background-attachment: fixed; /* Fija la imagen al desplazarse */
+            }
+            .titulo{
+                color: black;
+                font-size: 110px;
+                margin-bottom: 15px;
+                font-weight: 700;
+            }
+            .lista{
+                width:fit-content;
+                margin: 0 auto;    /* Centra horizontalmente */
+                padding-left: 0;   /* Elimina el padding por defecto */
+                list-style-position: inside; /* Coloca las viñetas dentro del flujo */
+                text-align: left;  /* Alinea el texto a la izquierda dentro de la lista */
+                font-size: 60px;
+            }
+               .lista a {
+                color: black; /* Color azul oscuro para enlaces normales */
+                text-decoration: none; /* Quita el subrayado */
+                transition: color 0.3s ease; /* Transición suave para el cambio de color */
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+            
+            .lista a:visited {
+                color: #8e44ad; /* Color morado para enlaces visitados */
+            }
+            
+            .lista a:hover {
+                color: #e74c3c; /* Color rojo al pasar el mouse */
+                background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+            }
+            
+            .lista a:active {
+                color: #27ae60; /* Color verde al hacer clic */
+            }
+            .document-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* 5 columnas de igual tamaño */
+            gap: 20px; /* Espacio entre elementos */
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        
+        .document-item {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .document-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .document-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+        
+        .document-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .download-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Estilos responsivos */
+        @media (max-width: 900px) {
+            .document-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .document-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+           .btn-regresar {
+                display: block;
+                width: 200px;
+                margin: 20px auto;
+                padding: 10px;
+                background-color: black;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-weight: bold;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+            
+            .btn-regresar:hover {
+                background-color: darkred;
+            }
+           
+        </style>
+    </head>
+
+<body>
+    <h1 align="center" class="titulo"><b> INDICE DE LA MATERIA</b></h1>
+
+        <ul class="lista">
+            <li ><b><a href="UNIDAD1.html">UNIDAD 1</a></b></li>
+            <li ><b><a href="UNIDAD2.html"> UNIDAD 2</a></b></li>
+            <li ><b><a href="UNIDAD3.html">UNIDAD 3 </a></b></li>
+        </ul>
+
+        <div class="document-grid">
+        <!-- Documento 1 -->
+        <div class="document-item">
+            <div class="document-icon">📄</div>
+            <div class="document-title">Reporte de Placas</div>
+            <a href="Reporte-de-Placas.pdf" class="download-btn" download>Abrir</a>
+        </div>
+        
+        <!-- Documento 2 -->
+        <div class="document-item">
+            <div class="document-icon">📑</div>
+            <div class="document-title">Procesadores</div>
+            <a href="Reporte-Procesadores-VGAS.pdf" class="download-btn" download>Abrir</a>
+        </div>
+        
+        <!-- Documento 3 -->
+        <div class="document-item">
+            <div class="document-icon">📊</div>
+            <div class="document-title">Gamas de equipo</div>
+            <a href="Gamas-de-Equipos.pdf" class="download-btn" download>Abrir</a>
+        </div>
+        
+        <!-- Documento 4 -->
+        <div class="document-item">
+            <div class="document-icon">📝</div>
+            <div class="document-title">Memorias</div>
+            <a href="Memorias.pdf" class="download-btn" download>Abrir</a>
+        </div>
+        
+        <!-- Documento 5 -->
+        <div class="document-item">
+            <div class="document-icon">📚</div>
+            <div class="document-title">CPUS</div>
+            <a href="Arquitectura De Computadoras (1) (1).pdf" class="download-btn" download>Abrir</a>
+        </div>
+        <!--Documento 6 -->
+        <div class="document-item">
+            <div class="document-icon">📚</div>
+            <div class="document-title">Instalacion de CPU</div>
+            <a href="Reporte-de-CPU.pdf" class="download-btn" download>Abrir</a>
+        </div>
+    </div>
+         <a href="Proyecto Final.html" class="btn-regresar">Regresar a la página principal</a>
+</body>
+</html>
